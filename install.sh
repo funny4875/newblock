@@ -6,7 +6,6 @@ EXTENSION_NAME=NewBlock
 EXTENSION_ID=newblock
 COLLABORATOR=KY-Li
 EXTENSION_DESCRIPTION="New Blocks Demo."
-cd ../
 
 mkdir -p node_modules/scratch-vm/src/extensions/scratch3_${EXTENSION_ID}
 cp ${EXTENSION_ID}/scratch-vm/src/extensions/scratch3_${EXTENSION_ID}/index.js node_modules/scratch-vm/src/extensions/scratch3_${EXTENSION_ID}/
