@@ -10,13 +10,20 @@ class newblock
 		return [{text: '1',value: '1'},{text: '2',value: '2'}]
 	}
 	constructor (runtime) {this.runtime = runtime;}
-	getInfo()
+	getInfo () 
 	{
-		return 
-		{
+		return {
 			id: 'newblocks',
 			name: 'New Blocks',
-			blocks:[
+			menus:
+			{
+				testMenu:
+				{
+					acceptReporters: true,
+					items: this.TEST_MENU
+				}
+			},
+			blocks: [
 			{
 				opcode: 'function1',
 				blockType: BlockType.REPORTER,
@@ -39,22 +46,10 @@ class newblock
 						defaultValue: ""
 					}
 				}
-			},],
-			menus:
-			{
-				testMenu: 
-				{
-					acceptReporters: true,
-					items: this.TEST_MENU
-				}
-			}
+			}]
 		};
 	};
-	
-	function1(){
-		return global_temp;
-	}
-	
+	function1(){return global_temp;}
 	function2(args)
 	{
 		const DATA = Cast.toString(args.DATA);
